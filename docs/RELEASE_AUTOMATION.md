@@ -17,6 +17,9 @@ on:
   release:
     types: [ created ]
 
+permissions:
+  contents: write
+
 jobs:
   build-and-attach:
     runs-on: ubuntu-latest
@@ -45,8 +48,9 @@ jobs:
 ## How It Works
 
 1. **Trigger** – The workflow fires whenever a new release is created (`on: release: types: [ created ]`), including draft releases. This allows maintainers to publish experimental builds by creating a draft release.
-2. **Build** – The project is checked out, JDK 17 is configured, and `./gradlew clean build` produces the plugin JAR.
-3. **Attach** – The `softprops/action-gh-release` action uploads every JAR found in `build/libs/` to the release that triggered the run. The release tag is detected automatically from the event context.
+2. **Permissions** – The workflow declares `contents: write` so the `GITHUB_TOKEN` can upload release assets. Without this, repositories that default to read-only permissions will receive a 403 error.
+3. **Build** – The project is checked out, JDK 17 is configured, and `./gradlew clean build` produces the plugin JAR.
+4. **Attach** – The `softprops/action-gh-release` action uploads every JAR found in `build/libs/` to the release that triggered the run. The release tag is detected automatically from the event context.
 
 ## Customisation
 
@@ -83,5 +87,6 @@ Once the release is created (whether published or draft), the workflow will run 
 
 - [ ] `.github/workflows/release.yml` exists and uses the template above
 - [ ] The workflow triggers on `release` events with type `created`
+- [ ] The workflow declares `permissions: contents: write`
 - [ ] The `files` glob matches the plugin's output JAR path
 - [ ] A test release (or pre-release) confirms the JAR is built and attached correctly
