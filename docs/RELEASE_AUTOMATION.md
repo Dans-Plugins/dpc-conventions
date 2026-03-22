@@ -4,7 +4,7 @@ This document describes the convention for automatically building and attaching 
 
 ## Overview
 
-When a maintainer creates a new GitHub Release, a GitHub Actions workflow should automatically build the plugin and attach the resulting JAR file to the release. This ensures that every release has a consistent, reproducible artifact without requiring manual uploads.
+When a maintainer creates a new GitHub Release (including drafts), a GitHub Actions workflow should automatically build the plugin and attach the resulting JAR file to the release. This ensures that every release has a consistent, reproducible artifact without requiring manual uploads. Draft releases can be used to provide experimental builds to users before a full release is published.
 
 ## Workflow File
 
@@ -44,7 +44,7 @@ jobs:
 
 ## How It Works
 
-1. **Trigger** – The workflow fires whenever a new release is created (`on: release: types: [ created ]`). Drafts do not trigger the workflow; it runs only when a release is published.
+1. **Trigger** – The workflow fires whenever a new release is created (`on: release: types: [ created ]`), including draft releases. This allows maintainers to publish experimental builds by creating a draft release.
 2. **Build** – The project is checked out, JDK 17 is configured, and `./gradlew clean build` produces the plugin JAR.
 3. **Attach** – The `softprops/action-gh-release` action uploads every JAR found in `build/libs/` to the release that triggered the run. The release tag is detected automatically from the event context.
 
@@ -75,9 +75,9 @@ Plugins that use the Shadow plugin to produce a fat JAR may output it to a diffe
 2. Click **Draft a new release**.
 3. Choose or create a tag (e.g. `v1.0.0`).
 4. Fill in the release title and description.
-5. Click **Publish release**.
+5. Click **Publish release** for a full release, or **Save draft** to create a draft release with an experimental build.
 
-Once the release is published, the workflow will run automatically. The built JAR will appear in the release's **Assets** section within a few minutes.
+Once the release is created (whether published or draft), the workflow will run automatically. The built JAR will appear in the release's **Assets** section within a few minutes.
 
 ## Checklist
 
