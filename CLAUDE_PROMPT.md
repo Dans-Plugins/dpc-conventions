@@ -18,6 +18,7 @@ Read each of the following convention documents in full before making any change
 - Documentation practices: https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/DOCUMENTATION_PRACTICES.md
 - Contributing standards:  https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/CONTRIBUTING_STANDARDS.md
 - Testing and CI:          https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/TESTING_AND_CI.md
+- Release automation:      https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/RELEASE_AUTOMATION.md
 
 Then perform the following steps:
 
@@ -35,6 +36,7 @@ Then perform the following steps:
      CHANGELOG.md) with appropriate starter content derived from the plugin's existing
      code and configuration.
    - Add or update .github/workflows/build.yml using the CI template in TESTING_AND_CI.md.
+   - Add or update .github/workflows/release.yml using the template in RELEASE_AUTOMATION.md.
    - Make any other changes needed to satisfy the conventions.
 
 4. Do not restate convention rules in commit messages or comments — reference the
