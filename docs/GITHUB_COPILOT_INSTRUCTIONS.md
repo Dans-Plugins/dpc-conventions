@@ -6,7 +6,7 @@ See [GitHub's documentation on customising Copilot](https://docs.github.com/en/c
 
 ## Purpose
 
-Without a `copilot-instructions.md` file, Copilot has no awareness of:
+Without a `.github/copilot-instructions.md` file, Copilot has no awareness of:
 
 - The DPC coding conventions and standards
 - The plugin's architecture and design decisions

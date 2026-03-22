@@ -19,7 +19,7 @@ Read each of the following convention documents in full before making any change
 - Contributing standards:  https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/CONTRIBUTING_STANDARDS.md
 - Testing and CI:          https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/TESTING_AND_CI.md
 - Release automation:      https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/RELEASE_AUTOMATION.md
-- GitHub Copilot instructions: https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/GITHUB_COPILOT_INSTRUCTIONS.md
+- GitHub Copilot instructions:      https://github.com/Dans-Plugins/dpc-conventions/blob/main/docs/GITHUB_COPILOT_INSTRUCTIONS.md
 
 Then perform the following steps:
 
