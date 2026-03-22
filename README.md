@@ -10,6 +10,7 @@ The goal is to bring every plugin in the organization to the same level of compl
 - [Documentation Practices](docs/DOCUMENTATION_PRACTICES.md) – What to document and where (in-repo files vs. wiki)
 - [Contributing Standards](docs/CONTRIBUTING_STANDARDS.md) – What a complete `CONTRIBUTING.md` should include
 - [Testing and CI](docs/TESTING_AND_CI.md) – Testing practices and continuous-integration setup
+- [Claude Prompt](CLAUDE_PROMPT.md) – Ready-to-use prompt for aligning a plugin repo with these conventions
 
 ## Reference Implementation
 

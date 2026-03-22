@@ -84,7 +84,7 @@ Encourage contributors to ask questions in the Discord server and provide the in
 
 Below is a minimal `CONTRIBUTING.md` template that satisfies all the requirements above.
 
-```markdown
+````markdown
 # Contributing
 
 ## Thank You
@@ -147,14 +147,12 @@ Windows: `.\gradlew.bat clean test`
 
 For manual testing, start a local Spigot server:
 
-```
-docker compose up
-```
+    docker compose up
 
 ## Questions
 
 Ask in the [Discord server](https://discord.gg/xXtuAQ2).
-```
+````
 
 ## Checklist
 

@@ -82,25 +82,21 @@ Links to the `CONTRIBUTING.md` file and to any developer notes in the wiki.
 
 Instructions for running the unit-test suite. Include both Linux and Windows commands.
 
-```markdown
+````markdown
 ## Testing
 
 ### Unit Tests
 
 Linux:
 
-```
-./gradlew clean test
-```
+    ./gradlew clean test
 
 Windows:
 
-```
-.\gradlew.bat clean test
-```
+    .\gradlew.bat clean test
 
 If you see `BUILD SUCCESSFUL`, the tests have passed.
-```
+````
 
 ### 7. Development
 

@@ -75,7 +75,7 @@ The configuration guide should explain every option in the plugin's `config.yml`
 
 Recommended structure:
 
-```markdown
+````markdown
 ## option-name
 
 **Type:** boolean / integer / string  
@@ -87,7 +87,7 @@ Recommended structure:
 ```yaml
 option-name: false
 ```
-```
+````
 
 List options in the same order they appear in the default `config.yml` so that users can follow along.
 
