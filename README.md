@@ -11,6 +11,7 @@ The goal is to bring every plugin in the organization to the same level of compl
 - [Contributing Standards](docs/CONTRIBUTING_STANDARDS.md) – What a complete `CONTRIBUTING.md` should include
 - [Testing and CI](docs/TESTING_AND_CI.md) – Testing practices and continuous-integration setup
 - [Release Automation](docs/RELEASE_AUTOMATION.md) – GitHub Action to build and attach a JAR to a release
+- [GitHub Copilot Instructions](docs/GITHUB_COPILOT_INSTRUCTIONS.md) – Required `.github/copilot-instructions.md` file that gives Copilot context about each plugin
 - [GitHub Coding Agent Prompt](CLAUDE_PROMPT.md) – Ready-to-use prompt for aligning a plugin repo with these conventions
 
 ## Reference Implementation
