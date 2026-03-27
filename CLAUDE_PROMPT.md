@@ -47,6 +47,12 @@ Then perform the following steps:
 Keep changes minimal and focused on closing the identified gaps. Do not refactor
 existing code or alter plugin behaviour.
 
-If this repository is not part of the DPC (Dans Plugins Community), omit all
-Discord links (https://discord.gg/xXtuAQ2) from README.md and CONTRIBUTING.md.
+Treat a repository as "part of the DPC (Dans Plugins Community)" if it is under the
+Dans-Plugins GitHub organization or has the GitHub topic `dpc-plugin`. If you cannot
+determine this from repository metadata, explicitly ask the user whether the repository
+is part of the DPC. If the user does not confirm that it is part of the DPC, treat it
+as not part of the DPC.
+
+For repositories that are not part of the DPC, omit all Discord links
+(https://discord.gg/xXtuAQ2) from README.md and CONTRIBUTING.md.
 ```

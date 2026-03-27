@@ -12,7 +12,7 @@ A short, welcoming opening that thanks the reader for their interest.
 
 ### 2. Links
 
-Quick links to the project website and, for DPC projects only, Discord so that contributors can ask questions.
+Quick links to the project website and at least one place where contributors can ask questions. For DPC projects this is typically Discord; for other projects use GitHub Issues, Discussions, or another appropriate support channel.
 
 ```markdown
 ## Links
@@ -153,8 +153,11 @@ For manual testing, start a local Spigot server:
 
 ## Questions
 
-<!-- For DPC projects, use the following: -->
+<!-- For DPC projects, use the following line: -->
 Ask in the [Discord server](https://discord.gg/xXtuAQ2).
+
+<!-- For non-DPC projects, use something like: -->
+Open a GitHub Discussion or issue in this repository.
 ````
 
 ## Checklist
