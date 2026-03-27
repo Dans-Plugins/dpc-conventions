@@ -46,4 +46,7 @@ Then perform the following steps:
 
 Keep changes minimal and focused on closing the identified gaps. Do not refactor
 existing code or alter plugin behaviour.
+
+If this repository is not part of the DPC (Dans Plugins Community), omit all
+Discord links (https://discord.gg/xXtuAQ2) from README.md and CONTRIBUTING.md.
 ```

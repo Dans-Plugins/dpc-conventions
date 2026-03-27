@@ -53,11 +53,12 @@ Links to user-facing documentation. At minimum this should point to a User Guide
 
 ### 4. Support
 
-Where users can get help. Always include the Discord link and a link to open a bug report.
+Where users can get help. For DPC projects, include the Discord link; omit it for non-DPC projects. Always include a link to open a bug report.
 
 ```markdown
 ## Support
 
+<!-- Include the following line only for DPC projects: -->
 You can find the support Discord server [here](https://discord.gg/xXtuAQ2).
 
 ### Experiencing a bug?
@@ -189,7 +190,7 @@ Use the following checklist when reviewing a plugin README:
 - [ ] Description section present
 - [ ] Installation section with numbered steps
 - [ ] Usage section with links to User Guide and Commands Reference
-- [ ] Support section with Discord link and bug-report link
+- [ ] Support section with Discord link (DPC projects only) and bug-report link
 - [ ] Contributing section with link to `CONTRIBUTING.md`
 - [ ] Testing section with Gradle commands
 - [ ] Development section with Docker setup instructions

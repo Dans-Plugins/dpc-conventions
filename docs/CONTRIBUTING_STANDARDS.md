@@ -12,12 +12,13 @@ A short, welcoming opening that thanks the reader for their interest.
 
 ### 2. Links
 
-Quick links to the project website and Discord so that contributors can ask questions.
+Quick links to the project website and, for DPC projects only, Discord so that contributors can ask questions.
 
 ```markdown
 ## Links
 
 - [Website](https://dansplugins.com)
+<!-- Include the following line only for DPC projects: -->
 - [Discord](https://discord.gg/xXtuAQ2)
 ```
 
@@ -78,7 +79,7 @@ Explain how to verify that changes work:
 
 ### 8. Questions
 
-Encourage contributors to ask questions in the Discord server and provide the invite link.
+Encourage contributors to ask questions and, for DPC projects, provide the Discord server invite link.
 
 ## Template
 
@@ -94,6 +95,7 @@ Thank you for your interest in contributing to <Plugin Name>! This guide will he
 ## Links
 
 - [Website](https://dansplugins.com)
+<!-- Include the following line only for DPC projects: -->
 - [Discord](https://discord.gg/xXtuAQ2)
 
 ## Requirements
@@ -151,6 +153,7 @@ For manual testing, start a local Spigot server:
 
 ## Questions
 
+<!-- For DPC projects, use the following: -->
 Ask in the [Discord server](https://discord.gg/xXtuAQ2).
 ````
 
@@ -158,7 +161,7 @@ Ask in the [Discord server](https://discord.gg/xXtuAQ2).
 
 - [ ] `CONTRIBUTING.md` exists in the repository root
 - [ ] Thank-you opening paragraph
-- [ ] Links to website and Discord
+- [ ] Links to website and Discord (Discord for DPC projects only)
 - [ ] Requirements list
 - [ ] Getting-started steps with `git clone` and `./gradlew build`
 - [ ] Explanation of issues and milestones
