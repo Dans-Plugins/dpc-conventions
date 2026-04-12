@@ -145,21 +145,17 @@ A table listing all major contributors and their contributions. Translators shou
 
 ### 9. License
 
-State the license (GPL-3.0 for all DPC plugins) and provide a brief summary of what it allows.
+If the repository already contains a `LICENSE` file, include a section that references it. **Do not add, change, or remove a `LICENSE` file.** These conventions are sometimes applied to forks where the original project has its own license (or intentionally has none), so licensing decisions must be left to the repository owner.
 
 ```markdown
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](LICENSE) (GPL-3.0).
+This project is licensed under the [<license name>](LICENSE).
 
-You are free to use, modify, and distribute this software, provided that:
-
-- Source code is made available under the same license when distributed.
-- Changes are documented and attributed.
-- No additional restrictions are applied.
-
-See the [LICENSE](LICENSE) file for the full text of the GPL-3.0 license.
+See the [LICENSE](LICENSE) file for full details.
 ```
+
+If no `LICENSE` file exists, omit this section entirely.
 
 ### 10. Project Status
 
@@ -195,5 +191,5 @@ Use the following checklist when reviewing a plugin README:
 - [ ] Testing section with Gradle commands
 - [ ] Development section with Docker setup instructions
 - [ ] Authors and Acknowledgement table
-- [ ] License section (GPL-3.0)
+- [ ] License section references existing `LICENSE` file (if one exists; omit section if not)
 - [ ] Project Status section with bStats link
