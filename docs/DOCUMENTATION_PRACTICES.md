@@ -14,7 +14,7 @@ The following files belong in the root of the repository (alongside `README.md`)
 |------|---------|-----------|
 | `README.md` | Project overview, quick-start, and index of all other docs | **Yes** |
 | `CONTRIBUTING.md` | How to fork, build, test, and submit a pull request | **Yes** |
-| `LICENSE` | Full text of the GPL-3.0 license | **Yes** |
+| `LICENSE` | Full text of the project's license (do **not** add, change, or remove — licensing is left to the repository owner) | No — preserve as-is if present |
 | `USER_GUIDE.md` | End-user getting-started guide and common usage scenarios | **Yes** |
 | `COMMANDS.md` | Complete reference of every command, its syntax, and required permissions | **Yes** |
 | `CONFIG.md` | Explanation of every configuration option with default values and examples | **Yes** |

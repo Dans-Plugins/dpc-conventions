@@ -44,6 +44,12 @@ Then perform the following steps:
 4. Do not restate convention rules in commit messages or comments — reference the
    relevant convention document URL instead.
 
+Do not add, change, or remove any LICENSE file. These conventions are sometimes
+applied to forks where the original project has its own license (or intentionally
+has none), so licensing decisions must be left to the repository owner. If a
+LICENSE file already exists, the README may reference it, but do not create one
+if it is missing.
+
 Keep changes minimal and focused on closing the identified gaps. Do not refactor
 existing code or alter plugin behaviour.
 
