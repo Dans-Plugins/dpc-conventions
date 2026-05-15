@@ -76,7 +76,7 @@ DPC plugins support hot-reloading using [ServerUtils](https://www.spigotmc.org/r
 
 ## Continuous Integration
 
-DPC plugins use [GitHub Actions](https://docs.github.com/en/actions) for CI. The CI pipeline should run on every push and pull request targeting the `main` and `develop` branches.
+DPC plugins use [GitHub Actions](https://docs.github.com/en/actions) for CI. The CI pipeline should run on every push and pull request targeting the `main` branch.
 
 ### Recommended Workflow
 
@@ -92,9 +92,9 @@ name: Build
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -119,7 +119,7 @@ jobs:
 ### Pull Request Checks
 
 - The CI build must pass before a pull request can be merged.
-- Branch protection rules should be enabled on `main` and `develop` to enforce this.
+- Branch protection rules should be enabled on `main` to enforce this.
 
 ## Test Coverage Expectations
 
@@ -139,5 +139,5 @@ jobs:
 - [ ] `sample.env` exists and is committed; `.env` is in `.gitignore`
 - [ ] `docker-compose.yml` (or `compose.yml`) exists for the development server
 - [ ] `up.sh`, `down.sh`, and `reload-plugin.sh` scripts are present and executable
-- [ ] `.github/workflows/build.yml` triggers on pushes and PRs to `main` and `develop`
+- [ ] `.github/workflows/build.yml` triggers on pushes and PRs to `main`
 - [ ] Branch protection rules require the CI build to pass before merging

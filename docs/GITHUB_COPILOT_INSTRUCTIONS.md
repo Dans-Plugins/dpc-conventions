@@ -57,8 +57,8 @@ Highlight any project-specific conventions that go beyond the DPC-wide standards
 
 Reinforce the DPC contribution workflow:
 
-- All changes should be made on a feature branch off `develop`
-- Pull requests target `develop`, not `main`
+- All changes should be made on a feature branch off `main`
+- Pull requests target `main`
 - Every pull request should reference a GitHub issue
 
 ## Template
@@ -94,8 +94,8 @@ making any changes.
 
 ## Contribution Workflow
 
-- Branch from `develop` for all changes.
-- Open a pull request against `develop`, not `main`.
+- Branch from `main` for all changes.
+- Open a pull request against `main`.
 - Reference the related GitHub issue in every pull request description.
 ````
 
