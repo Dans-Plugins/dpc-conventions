@@ -150,9 +150,9 @@ Windows: `.\gradlew.bat clean test`
 
 For manual testing, start the Docker-based development server:
 
-    cp sample.env .env
-    ./gradlew build
-    ./up.sh
+1. Copy `sample.env` to `.env` and configure as needed.
+2. Build the plugin: `./gradlew build`
+3. Start the server: `./up.sh`
 
 Reload the plugin after a rebuild with `./reload-plugin.sh`, and stop the server with `./down.sh`.
 
