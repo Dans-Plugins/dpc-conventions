@@ -59,7 +59,7 @@ Clear workflow for creating a contribution:
 2. Check out the `main` branch: `git checkout main`
 3. Create a feature branch: `git checkout -b <descriptive-branch-name>`
 4. Make your changes.
-5. Test your changes (see [Testing](#testing)).
+5. Test your changes (see [Testing](#7-testing)).
 6. Commit: `git commit -m "Brief description of changes"`
 7. Push to your fork: `git push origin <branch-name>`
 8. Open a pull request against the `main` branch of the upstream repository. Include a description and link the related issue using `#<number>`.
@@ -75,7 +75,8 @@ If your change adds or modifies any user-facing strings, update the relevant lan
 Explain how to verify that changes work:
 
 - Describe how to run the automated test suite (see [Testing and CI](TESTING_AND_CI.md)).
-- Describe how to run a local Spigot server (Docker is preferred).
+- Describe how to start the Docker-based development server with `./up.sh`, how to reload the
+  plugin after a rebuild with `./reload-plugin.sh`, and how to stop the server with `./down.sh`.
 
 ### 8. Questions
 
@@ -147,9 +148,13 @@ Run the unit tests with:
 Linux: `./gradlew clean test`  
 Windows: `.\gradlew.bat clean test`
 
-For manual testing, start a local Spigot server:
+For manual testing, start the Docker-based development server:
 
-    docker compose up
+    cp sample.env .env
+    ./gradlew build
+    ./up.sh
+
+Reload the plugin after a rebuild with `./reload-plugin.sh`, and stop the server with `./down.sh`.
 
 ## Questions
 
