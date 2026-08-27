@@ -118,7 +118,7 @@ A Docker-based test server is available for development.
 
 #### Stopping the Test Server
 
-./down.sh
+    ./down.sh
 ```
 
 ### 8. Authors and Acknowledgement
