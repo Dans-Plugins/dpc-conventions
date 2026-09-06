@@ -110,7 +110,7 @@ Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) conventions:
 - [ ] `README.md`, `CONTRIBUTING.md`, `USER_GUIDE.md`, `COMMANDS.md`, and `CONFIG.md` are present in the repository root
 - [ ] `CHANGELOG.md` is present (recommended)
 - [ ] No `LICENSE` file has been added, changed, or removed; an existing one is preserved as-is
-- [ ] `<FEATURE>_FLAGS.md` and `DATABASE_QUERYING.md` are present where the plugin exposes a flag system or a directly queryable data store
+- [ ] `<FEATURE>_FLAGS.md` is present if the plugin exposes a flag or toggle system, and `DATABASE_QUERYING.md` is present if its data store can be queried directly
 - [ ] Documents use plain language, numbered lists for sequential steps, and fenced code blocks for commands, config snippets, and file paths
 - [ ] Documents link to one another rather than repeating the same content
 - [ ] `USER_GUIDE.md` covers Prerequisites, First Steps, Common Scenarios, and Permissions
