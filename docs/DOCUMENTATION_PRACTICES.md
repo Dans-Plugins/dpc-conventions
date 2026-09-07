@@ -104,3 +104,18 @@ Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) conventions:
 - Documentation changes that accompany a code change should be included in the **same pull request**.
 - Pull request templates should include a documentation checklist item.
 - Reviewers should reject pull requests that add user-facing features without updating the relevant documentation files.
+
+## Checklist
+
+- [ ] `README.md`, `CONTRIBUTING.md`, `USER_GUIDE.md`, `COMMANDS.md`, and `CONFIG.md` are present in the repository root
+- [ ] `CHANGELOG.md` is present (recommended)
+- [ ] No `LICENSE` file has been added, changed, or removed; an existing one is preserved as-is
+- [ ] `<FEATURE>_FLAGS.md` is present if the plugin exposes a flag or toggle system, and `DATABASE_QUERYING.md` is present if its data store can be queried directly
+- [ ] Documents use plain language, numbered lists for sequential steps, and fenced code blocks for commands, config snippets, and file paths
+- [ ] Documents link to one another rather than repeating the same content
+- [ ] `USER_GUIDE.md` covers Prerequisites, First Steps, Common Scenarios, and Permissions
+- [ ] `COMMANDS.md` lists every command with its description, permission, usage, and an example, with related commands grouped under sub-headings
+- [ ] `CONFIG.md` explains every `config.yml` option with its type, default, description, and an example, listed in the same order as the default `config.yml`
+- [ ] `CHANGELOG.md` follows Keep a Changelog: one `## [version] – YYYY-MM-DD` heading per release, changes grouped by type, and `## [Unreleased]` at the top
+- [ ] Documentation updates are included in the same pull request as the code changes they describe
+- [ ] The pull request template includes a documentation checklist item
