@@ -6,7 +6,9 @@ For what a release *means* to an operator — the stable and experimental channe
 
 ## Overview
 
-When a maintainer creates a new GitHub Release (including drafts), a GitHub Actions workflow should automatically build the plugin and attach the resulting JAR file to the release. This ensures that every release has a consistent, reproducible artifact without requiring manual uploads. Draft releases can be used to provide experimental builds to users before a full release is published.
+When a GitHub Release is published, a GitHub Actions workflow should build the plugin and attach the resulting JAR file to the release — unless the release was published with a JAR already attached, in which case the workflow does nothing. This ensures that every release has an artifact without requiring manual uploads, while letting the organisation's release automation publish the exact JAR that passed verification (see [Release Channels](RELEASE_CHANNELS.md)) without a second, unverified JAR being attached beside it.
+
+Experimental builds are provided by the separate rolling `dev` pre-release, not by draft releases.
 
 ## Workflow File
 
@@ -17,7 +19,7 @@ name: Release
 
 on:
   release:
-    types: [ created ]
+    types: [ published ]
 
 permissions:
   contents: write
@@ -25,6 +27,10 @@ permissions:
 jobs:
   build-and-attach:
     runs-on: ubuntu-latest
+    # A release published with a .jar already attached was produced by the release automation,
+    # which attaches the exact JAR that passed verification. Rebuilding here would attach a second,
+    # unverified JAR — and Dan's Plugin Manager installs the first .jar asset it finds.
+    if: ${{ !contains(join(github.event.release.assets.*.name, ','), '.jar') }}
 
     steps:
       - uses: actions/checkout@v4
@@ -49,10 +55,11 @@ jobs:
 
 ## How It Works
 
-1. **Trigger** – The workflow fires whenever a new release is created (`on: release: types: [ created ]`), including draft releases. This allows maintainers to publish experimental builds by creating a draft release.
-2. **Permissions** – The workflow declares `contents: write` so the `GITHUB_TOKEN` can upload release assets. Without this, repositories that default to read-only permissions will receive a 403 error.
-3. **Build** – The project is checked out, JDK 17 is configured, and `./gradlew clean build` produces the plugin JAR.
-4. **Attach** – The `softprops/action-gh-release` action uploads every JAR found in `build/libs/` to the release that triggered the run. The release tag is detected automatically from the event context.
+1. **Trigger** – The workflow fires whenever a release is published (`on: release: types: [ published ]`). This covers a release published directly and a draft that is published later. It does not fire while a release is still a draft — GitHub does not run workflows for draft releases' `created` events at all, so the older `created` trigger silently never built a draft-then-published release.
+2. **Skip when a JAR is attached** – The job's `if:` inspects the published release's assets and does nothing when a `.jar` is already there. `gh release create <tag> <jar>` creates the release as a draft, uploads the asset, then publishes, so the `published` event already carries the asset. A release published by hand without an asset still gets its build.
+3. **Permissions** – The workflow declares `contents: write` so the `GITHUB_TOKEN` can upload release assets. Without this, repositories that default to read-only permissions will receive a 403 error.
+4. **Build** – The project is checked out, JDK 17 is configured, and `./gradlew clean build` produces the plugin JAR.
+5. **Attach** – The `softprops/action-gh-release` action uploads every JAR found in `build/libs/` to the release that triggered the run. The release tag is detected automatically from the event context.
 
 ## Customisation
 
@@ -75,20 +82,23 @@ Plugins that use the Shadow plugin to produce a fat JAR may output it to a diffe
           files: build/libs/*-all.jar
 ```
 
-## Creating a Release
+## Creating a Release by Hand
+
+Stable releases are normally cut by the release automation (see [Release Channels](RELEASE_CHANNELS.md)). To create one by hand:
 
 1. Go to the repository's **Releases** page on GitHub.
 2. Click **Draft a new release**.
 3. Choose or create a tag (e.g. `v1.0.0`).
 4. Fill in the release title and description.
-5. Click **Publish release** for a full release, or **Save draft** to create a draft release with an experimental build.
+5. Click **Publish release**. Saving a draft does not trigger a build; publishing it does.
 
-Once the release is created (whether published or draft), the workflow will run automatically. The built JAR will appear in the release's **Assets** section within a few minutes.
+Once the release is published, the workflow runs and the built JAR appears in the release's **Assets** section within a few minutes. If you attach a JAR yourself before publishing, the workflow leaves the release alone.
 
 ## Checklist
 
 - [ ] `.github/workflows/release.yml` exists and uses the template above
-- [ ] The workflow triggers on `release` events with type `created`
+- [ ] The workflow triggers on `release` events with type `published`
+- [ ] The job skips when the published release already carries a `.jar` asset
 - [ ] The workflow declares `permissions: contents: write`
 - [ ] The `files` glob matches the plugin's output JAR path
 - [ ] A test release (or pre-release) confirms the JAR is built and attached correctly
