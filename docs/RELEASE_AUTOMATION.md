@@ -2,6 +2,8 @@
 
 This document describes the convention for automatically building and attaching plugin JARs to GitHub Releases. [Medieval Factions](https://github.com/Dans-Plugins/Medieval-Factions) is the reference implementation.
 
+For what a release *means* to an operator — the stable and experimental channels, what stable promises, and how a build is promoted — see [Release Channels](RELEASE_CHANNELS.md).
+
 ## Overview
 
 When a maintainer creates a new GitHub Release (including drafts), a GitHub Actions workflow should automatically build the plugin and attach the resulting JAR file to the release. This ensures that every release has a consistent, reproducible artifact without requiring manual uploads. Draft releases can be used to provide experimental builds to users before a full release is published.
