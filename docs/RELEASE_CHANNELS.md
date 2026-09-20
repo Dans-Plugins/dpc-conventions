@@ -51,6 +51,16 @@ What an operator should still do, because no check covers every case:
 
 The automation is being rolled out in phases. As of September 2026 every plugin with a flat-file or no data store is on the automated promote list; the database-backed plugins join as their save-compatibility scenarios are written and pass. Until a plugin is on the list, its stable channel is whatever was last published by hand and may be well behind the default branch; its experimental channel is current either way. A plugin's README should say which channel its documentation describes.
 
+## The SpigotMC listing
+
+A plugin's SpigotMC page mirrors the **stable** channel and nothing else: the version it shows is the latest non-prerelease GitHub release, and its download is that release's jar (as an *external download* pointing at the GitHub asset, so the bytes are the ones the gates verified). Experimental builds are never posted there.
+
+SpigotMC has no API for posting, so a stable release is not finished until someone has posted the update by hand. When the automation publishes a release for a listed plugin it opens a `Post <version> to SpigotMC` issue on the repository with the three things the form needs — version string, external download URL, release notes in BBCode — and the issue is closed once the page shows the version. A page that is more than a few days behind the stable channel is a defect, not a backlog.
+
+The page's description is written from the README, not the other way round: what the plugin does, how to install it (this page or `/dpm get`), the links block (source, releases, wiki, dansplugins.com, Discord, bStats), the two release channels, the usage-reporting paragraph where the stable build reports, and the license. Its *tested versions* field states the Minecraft version the release gate booted the build on. Old descriptions that name retired sites, pre-transfer repository paths or Minecraft versions the build no longer targets are replaced, not edited around.
+
+The README links the page in its install step (see [README structure](README_STRUCTURE.md)); a plugin that has no page says so nowhere and simply links the GitHub releases page.
+
 ## Checklist
 
 - [ ] The repository publishes a `dev` pre-release from `.github/workflows/dev-release.yml`
@@ -58,3 +68,4 @@ The automation is being rolled out in phases. As of September 2026 every plugin 
 - [ ] Storage, migration, and serialization paths are identifiable (by package or directory) so the version floors can be applied
 - [ ] Console-drivable or bot-drivable commands exist to create at least one of each persisted entity, so a save-compatibility scenario can be written
 - [ ] The README tells operators which channel it documents
+- [ ] If the plugin has a SpigotMC page, the README links it and the page shows the latest stable release
