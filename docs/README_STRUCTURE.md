@@ -20,6 +20,8 @@ A short paragraph explaining what the plugin does and why it exists. Include any
 
 Step-by-step instructions for getting the plugin running on a server. Split into sub-sections as needed (e.g. first-time installation, optional integrations, companion plugins).
 
+The download step links the plugin's SpigotMC page. A plugin with no SpigotMC page links its GitHub releases page in that step instead (see [Release Channels](RELEASE_CHANNELS.md#the-spigotmc-listing)).
+
 ```markdown
 ## Installation
 
