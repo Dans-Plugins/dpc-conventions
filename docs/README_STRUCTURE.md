@@ -103,7 +103,7 @@ If you see `BUILD SUCCESSFUL`, the tests have passed.
 
 ### 7. Development
 
-Instructions for spinning up a local development environment (Docker, hot-reloading, etc.).
+Instructions for spinning up the Docker-based development server: how to start it with `./up.sh`, how to reload the plugin after a rebuild with `./reload-plugin.sh`, and how to stop it with `./down.sh` (see [Testing and CI](TESTING_AND_CI.md#docker-based-development-server)).
 
 ```markdown
 ## Development
@@ -117,6 +117,12 @@ A Docker-based test server is available for development.
 1. Copy `sample.env` to `.env` and configure as needed.
 2. Build the plugin: `./gradlew build`
 3. Start the test server: `./up.sh`
+
+#### Reloading the Plugin
+
+After a rebuild, reload the plugin without restarting the server:
+
+    ./reload-plugin.sh
 
 #### Stopping the Test Server
 
