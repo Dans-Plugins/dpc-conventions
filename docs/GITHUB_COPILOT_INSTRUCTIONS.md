@@ -63,7 +63,7 @@ Reinforce the DPC contribution workflow:
 
 ## Template
 
-Below is a minimal `.github/copilot-instructions.md` template that satisfies all the requirements above.
+Below is a minimal `.github/copilot-instructions.md` template that satisfies all the requirements above. Replace each `<placeholder>` with the plugin's actual value.
 
 ````markdown
 # Copilot Instructions
@@ -74,10 +74,10 @@ making any changes.
 
 ## Technology Stack
 
-- Language: Java
-- Build tool: Gradle (Groovy DSL)
+- Language: <Java or Kotlin>
+- Build tool: <Gradle (Groovy DSL) or Gradle (Kotlin DSL)>
 - Target platform: Spigot / Paper
-- Test framework: JUnit 5
+- Test framework: <test framework, e.g. JUnit 5>
 
 ## Project Structure
 
