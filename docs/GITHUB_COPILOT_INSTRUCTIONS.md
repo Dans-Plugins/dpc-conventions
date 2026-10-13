@@ -81,16 +81,17 @@ making any changes.
 
 ## Project Structure
 
-- `src/main/java/` – Plugin source code
+- `<src/main/java/ or src/main/kotlin/>` – Plugin source code
 - `src/main/resources/` – `plugin.yml`, `config.yml`, and `lang/` files
 - `src/test/java/` – Unit tests
 
 ## Coding Conventions
 
 - Use the `lang/` resource files for every user-facing string; never hard-code
-  messages in Java.
+  messages in source code.
 - Follow the existing package structure when adding new classes.
-- Annotate every command executor and event listener with `@Override` where applicable.
+- In Java, annotate every method that overrides a Bukkit API method (for example
+  `onCommand`) with `@Override`.
 
 ## Contribution Workflow
 
