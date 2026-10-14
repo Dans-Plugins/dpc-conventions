@@ -104,7 +104,7 @@ Thank you for your interest in contributing to <Plugin Name>! This guide will he
 - A GitHub account
 - Git installed on your local machine
 - A Java IDE or text editor
-- A basic understanding of Java
+- A basic understanding of <Java or Kotlin>
 
 ## Getting Started
 
