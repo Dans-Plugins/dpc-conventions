@@ -200,4 +200,4 @@ Use the following checklist when reviewing a plugin README:
 - [ ] Development section with Docker setup instructions
 - [ ] Authors and Acknowledgement table
 - [ ] License section references existing `LICENSE` file (if one exists; omit section if not)
-- [ ] Project Status section with bStats link
+- [ ] Project Status section with development status, and a bStats link if the plugin collects metrics
