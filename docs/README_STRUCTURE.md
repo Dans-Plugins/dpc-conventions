@@ -196,8 +196,8 @@ Use the following checklist when reviewing a plugin README:
 - [ ] Usage section with links to User Guide and Commands Reference
 - [ ] Support section with Discord link (DPC projects only) and bug-report link
 - [ ] Contributing section with link to `CONTRIBUTING.md`
-- [ ] Testing section with Gradle commands
-- [ ] Development section with Docker setup instructions
+- [ ] Testing section with Linux and Windows Gradle commands
+- [ ] Development section with Docker setup instructions, and how to start (`./up.sh`), reload (`./reload-plugin.sh`), and stop (`./down.sh`) the server
 - [ ] Authors and Acknowledgement table
 - [ ] License section references existing `LICENSE` file (if one exists; omit section if not)
 - [ ] Project Status section with development status, and a bStats link if the plugin collects metrics
