@@ -2,6 +2,20 @@
 
 Every DPC plugin repository should have a `README.md` that follows the structure described below. [Medieval Factions](https://github.com/Dans-Plugins/Medieval-Factions) is the reference implementation.
 
+## Hero Visual
+
+A plugin README opens with a captioned screenshot or GIF of the plugin's real output, placed between the title (and any badges) and `## Description`. Readers should see what the plugin does in game before they read how to install it.
+
+- **Real in-game output only.** Capture it from the current build running on a local test server (the Docker dev server from section 7 works) and show it faithfully: chat messages, GUIs, scoreboards, maps, particles, or the world changes the plugin makes. A world render (for example an exported world rendered in Blender, as [Minecraft-USD-Exporter](https://github.com/Dans-Plugins/Minecraft-USD-Exporter) does) also counts. **Never a mockup**, an edited or composited fake, stock art, or an AI-generated illustration. If real output cannot be captured yet, ship no image rather than a fake one.
+- **Captioned.** Descriptive alt text that says what is shown (`![The /mf info command showing a faction's members and power in chat](docs/images/faction-info.png)`), never `![screenshot](...)`.
+- **Committed under `docs/images/`.** Not hot-linked from an issue attachment or another site.
+- **Sized for a README.** Stills ≲ 1 MB where practical; GIFs ≲ 3 MB (trim, crop, drop frames); longer clips as a video with a still poster image.
+- **Refreshed in the same PR** that visibly changes what the image shows (messages, GUIs, rendering). A committed capture script is encouraged where practical.
+- **Private and test data only.** Use test accounts and generated names; no real player names, skins, chat logs, IP addresses, server hostnames, tokens, or personal desktop content. Crop to the game window.
+- **License.** Screenshots of the plugin's own output are fine; don't commit third-party assets themselves (resource packs, logos, fonts) as images.
+
+Repositories with nothing visible (libraries and APIs without in-game output, templates, docs-only repos) skip this section.
+
 ## Required Sections
 
 The sections below must appear in this order.
@@ -191,6 +205,7 @@ The following sections are encouraged when relevant:
 
 Use the following checklist when reviewing a plugin README:
 
+- [ ] Hero screenshot or GIF of real in-game output (or a world render) near the top, captioned, committed under `docs/images/` (N/A for repos with nothing visible)
 - [ ] Description section present
 - [ ] Installation section with numbered steps
 - [ ] Usage section with links to User Guide and Commands Reference
