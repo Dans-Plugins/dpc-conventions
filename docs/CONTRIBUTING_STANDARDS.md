@@ -175,5 +175,5 @@ Open a GitHub Discussion or issue in this repository.
 - [ ] Explanation of issues and milestones
 - [ ] Branch-based workflow pointing to `main`
 - [ ] Language-file instructions
-- [ ] Testing instructions (automated + Docker)
+- [ ] Testing instructions: the automated test suite, and how to start (`./up.sh`), reload (`./reload-plugin.sh`), and stop (`./down.sh`) the Docker server
 - [ ] Questions / contact section
