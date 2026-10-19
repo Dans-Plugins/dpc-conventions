@@ -106,11 +106,15 @@ Instructions for running the unit-test suite. Include both Linux and Windows com
 
 Linux:
 
-    ./gradlew clean test
+```bash
+./gradlew clean test
+```
 
 Windows:
 
-    .\gradlew.bat clean test
+```bat
+.\gradlew.bat clean test
+```
 
 If you see `BUILD SUCCESSFUL`, the tests have passed.
 ````
@@ -119,7 +123,7 @@ If you see `BUILD SUCCESSFUL`, the tests have passed.
 
 Instructions for spinning up the Docker-based development server: how to start it with `./up.sh`, how to reload the plugin after a rebuild with `./reload-plugin.sh`, and how to stop it with `./down.sh` (see [Testing and CI](TESTING_AND_CI.md#docker-based-development-server)).
 
-```markdown
+````markdown
 ## Development
 
 ### Test Server with Plugin Hot-Reloading
@@ -136,12 +140,16 @@ A Docker-based test server is available for development.
 
 After a rebuild, reload the plugin without restarting the server:
 
-    ./reload-plugin.sh
+```bash
+./reload-plugin.sh
+```
 
 #### Stopping the Test Server
 
-    ./down.sh
+```bash
+./down.sh
 ```
+````
 
 ### 8. Authors and Acknowledgement
 
