@@ -61,7 +61,7 @@ Clear workflow for creating a contribution:
 4. Make your changes.
 5. Test your changes (see [Testing](#7-testing)).
 6. Commit: `git commit -m "Brief description of changes"`
-7. Push to your fork: `git push origin <branch-name>`
+7. Push to your fork: `git push origin <descriptive-branch-name>`
 8. Open a pull request against the `main` branch of the upstream repository. Include a description and link the related issue using `#<number>`.
 9. Address any review feedback.
 10. Once approved, the maintainer will merge the PR into `main`.
@@ -110,7 +110,7 @@ Thank you for your interest in contributing to <Plugin Name>! This guide will he
 
 1. [Sign up for GitHub](https://github.com/signup) if you don't have an account.
 2. Fork the repository by clicking **Fork** at the top right of the repo page.
-3. Clone your fork: `git clone https://github.com/<your-username>/<plugin>.git`
+3. Clone your fork: `git clone https://github.com/<your-username>/<plugin-name>.git`
 4. Open the project in your IDE.
 5. Build the plugin: `./gradlew build`
    If you encounter errors, please open an issue.
