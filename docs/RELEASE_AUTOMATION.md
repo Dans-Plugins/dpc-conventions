@@ -65,14 +65,19 @@ jobs:
 
 ### Filtering JARs
 
-If the build produces multiple JARs (e.g. a main artifact and a `-sources` or `-javadoc` artifact) and you only want to attach the main one, narrow the glob pattern:
+If the build produces multiple JARs (e.g. a main artifact and a `-sources` or `-javadoc` artifact) and you only want to attach the main one, delete the extra JARs before the upload step:
 
 ```yaml
+      - name: Remove extra JARs
+        run: rm -f build/libs/*-sources.jar build/libs/*-javadoc.jar
+
       - name: Upload JAR to release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/libs/<PluginName>-*.jar
+          files: build/libs/*.jar
 ```
+
+Narrowing the glob does not work here: `build/libs/<PluginName>-*.jar` also matches `<PluginName>-1.0.0-sources.jar`. Do not rely on a `!` negation pattern in `files` either; a negated pattern has been observed not to exclude the matching JAR.
 
 ### Shadow / Fat JARs
 
