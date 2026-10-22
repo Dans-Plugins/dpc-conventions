@@ -81,7 +81,7 @@ Narrowing the glob does not work here: `build/libs/<PluginName>-*.jar` also matc
 
 ### Shadow / Fat JARs
 
-Plugins that use the Shadow plugin to produce a fat JAR get it in `build/libs/` beside the plain JAR, with an `-all` suffix (e.g. `<PluginName>-1.0.0-all.jar`). Narrow the `files` pattern so only the fat JAR is attached. The suffix keeps the `-sources` and `-javadoc` JARs out too:
+By default, the Shadow plugin writes its fat JAR to `build/libs/` beside the plain JAR, with an `-all` suffix (e.g. `<PluginName>-1.0.0-all.jar`). Narrow the `files` pattern so only the fat JAR is attached. The suffix also keeps out the `-sources` and `-javadoc` JARs. If the build changes Shadow's output name or directory, match that instead:
 
 ```yaml
           files: build/libs/*-all.jar
