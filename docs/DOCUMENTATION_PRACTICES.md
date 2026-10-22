@@ -63,7 +63,7 @@ Recommended structure per command:
 
 **Description:** What the command does.  
 **Permission:** `plugin.command.example`  
-**Usage:** `/examplecommand <argument>`  
+**Usage:** `/examplecommand <required> [optional]`  
 **Example:** `/examplecommand myvalue`
 ```
 
