@@ -134,8 +134,9 @@ Issues are grouped into [milestones](<milestones-link>) representing upcoming re
 5. Test your changes.
 6. Commit: `git commit -m "Description of changes"`
 7. Push: `git push origin <branch-name>`
-8. Open a pull request against `main`, link the related issue with `#<number>`.
+8. Open a pull request against `main`. Include a description and link the related issue with `#<number>`.
 9. Address review feedback.
+10. Once approved, the maintainer will merge the pull request into `main`.
 
 ### Language Files
 
