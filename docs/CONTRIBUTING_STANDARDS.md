@@ -113,7 +113,7 @@ Thank you for your interest in contributing to <Plugin Name>! This guide will he
 3. Clone your fork: `git clone https://github.com/<your-username>/<plugin-name>.git`
 4. Open the project in your IDE.
 5. Build the plugin: `./gradlew build`
-   If you encounter errors, please open an issue.
+6. If the build fails, please open an issue.
 
 ## Identifying What to Work On
 
