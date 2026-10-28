@@ -20,6 +20,8 @@ Quick links to the project website and at least one place where contributors can
 - [Website](https://dansplugins.com)
 <!-- Include the following line only for DPC projects: -->
 - [Discord](https://discord.gg/xXtuAQ2)
+<!-- For non-DPC projects, use something like: -->
+- [GitHub Issues](<issues-link>)
 ```
 
 ### 3. Requirements
@@ -98,6 +100,8 @@ Thank you for your interest in contributing to <Plugin Name>! This guide will he
 - [Website](https://dansplugins.com)
 <!-- Include the following line only for DPC projects: -->
 - [Discord](https://discord.gg/xXtuAQ2)
+<!-- For non-DPC projects, use something like: -->
+- [GitHub Issues](<issues-link>)
 
 ## Requirements
 
