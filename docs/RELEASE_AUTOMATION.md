@@ -101,6 +101,8 @@ Stable releases are normally cut by the release automation (see [Release Channel
 
 Once the release is published, the workflow runs and the built JAR appears in the release's **Assets** section within a few minutes. If you attach a JAR yourself before publishing, the workflow leaves the release alone.
 
+To test the workflow, publish a pre-release instead: tick **Set as a pre-release** before step 5. A pre-release fires the same `published` event, but GitHub leaves it out of `/releases/latest`, so `/dpm get` and `/dpm update` never serve it (see [Release Channels](RELEASE_CHANNELS.md#the-two-channels)). A full release published only to test the workflow becomes the stable release that operators' servers install.
+
 ## Checklist
 
 - [ ] `.github/workflows/release.yml` exists and uses the template above
@@ -108,4 +110,4 @@ Once the release is published, the workflow runs and the built JAR appears in th
 - [ ] The job skips when the published release already carries a `.jar` asset
 - [ ] The workflow declares `permissions: contents: write`
 - [ ] The `files` glob matches the plugin's output JAR path
-- [ ] A test release (or pre-release) confirms the JAR is built and attached correctly
+- [ ] A test pre-release (not a full release) confirms the JAR is built and attached correctly
