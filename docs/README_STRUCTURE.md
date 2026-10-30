@@ -41,6 +41,7 @@ The download step links the plugin's SpigotMC page. A plugin with no SpigotMC pa
 
 ### First Time Installation
 
+<!-- If the plugin has no SpigotMC page, use this step 1 instead: 1. Download the plugin from the [GitHub releases page](<releases link>). -->
 1. Download the plugin from [SpigotMC](<link>).
 2. Place the jar in the `plugins` folder of your server.
 3. Restart your server.
