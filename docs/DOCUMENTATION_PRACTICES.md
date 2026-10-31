@@ -95,7 +95,7 @@ List options in the same order they appear in the default `config.yml` so that u
 
 Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) conventions:
 
-- One `## [version] – YYYY-MM-DD` heading per release.
+- One `## [version] - YYYY-MM-DD` heading per release, with a plain hyphen (`-`) between the version and the date, as Keep a Changelog writes it.
 - Changes grouped under `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`.
 - Unreleased changes listed under `## [Unreleased]` at the top.
 
@@ -116,6 +116,6 @@ Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) conventions:
 - [ ] `USER_GUIDE.md` covers Prerequisites, First Steps, Common Scenarios, and Permissions
 - [ ] `COMMANDS.md` lists every command with its description, permission, usage, and an example, with related commands grouped under sub-headings
 - [ ] `CONFIG.md` explains every `config.yml` option with its type, default, description, and an example, listed in the same order as the default `config.yml`
-- [ ] `CHANGELOG.md` follows Keep a Changelog: one `## [version] – YYYY-MM-DD` heading per release, changes grouped by type, and `## [Unreleased]` at the top
+- [ ] `CHANGELOG.md` follows Keep a Changelog: one `## [version] - YYYY-MM-DD` heading per release, changes grouped by type, and `## [Unreleased]` at the top
 - [ ] Documentation updates are included in the same pull request as the code changes they describe
 - [ ] The pull request template includes a documentation checklist item
