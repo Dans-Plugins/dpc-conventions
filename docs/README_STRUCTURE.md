@@ -197,6 +197,7 @@ A brief statement of the current development status and a link to the bStats pag
 
 This project is in active development.
 
+<!-- Include the following subsection only if the plugin collects metrics: -->
 ### bStats
 
 You can view the bStats page for the plugin [here](<bstats link>).
