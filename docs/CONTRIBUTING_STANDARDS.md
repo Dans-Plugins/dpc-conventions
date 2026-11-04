@@ -144,7 +144,7 @@ Issues are grouped into [milestones](<milestones-link>) representing upcoming re
 
 ### Language Files
 
-Update `src/main/resources/lang/` for any user-facing string changes.
+Update `src/main/resources/lang/` for any user-facing string changes. To add a new language, create a new file there.
 
 ## Testing
 
