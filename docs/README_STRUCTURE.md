@@ -133,9 +133,10 @@ A Docker-based test server is available for development.
 
 #### Setup
 
-1. Copy `sample.env` to `.env` and configure as needed.
-2. Build the plugin: `./gradlew build`
-3. Start the test server: `./up.sh`
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop).
+2. Copy `sample.env` to `.env` and configure as needed.
+3. Build the plugin: `./gradlew build`
+4. Start the test server: `./up.sh`
 
 #### Reloading the Plugin
 
