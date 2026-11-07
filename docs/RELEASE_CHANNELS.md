@@ -27,7 +27,7 @@ What stable does **not** promise:
 
 - **Downgrade compatibility.** Rolling back to an older release is not guaranteed to preserve data written by the newer one. Back up the plugin's data folder before an upgrade you might want to reverse.
 - **Correctness of every feature.** The checks above prove that a release boots, keeps data, and reloads it. Whether a feature behaves correctly in the world is what the plugin's own tests and its issue tracker are for.
-- **Every Minecraft version the plugin declares.** Verification runs on the Minecraft version the organisation's own servers run. Older `api-version` targets are supported on a best-effort basis.
+- **Every Minecraft version the plugin declares.** Verification boots a candidate once per version listed in the repository's `minecraft-versions.json`. Versions not listed there are supported on a best-effort basis.
 
 ## How a build becomes stable
 
@@ -57,7 +57,7 @@ A plugin's SpigotMC page mirrors the **stable** channel and nothing else: the ve
 
 SpigotMC has no API for posting, so a stable release is not finished until someone has posted the update by hand. When the automation publishes a release for a listed plugin it opens a `Post <version> to SpigotMC` issue on the repository with the three things the form needs — version string, external download URL, release notes in BBCode — and the issue is closed once the page shows the version. A page that is more than a few days behind the stable channel is a defect, not a backlog.
 
-The page's description is written from the README, not the other way round: what the plugin does, how to install it (this page or `/dpm get`), the links block (source, releases, wiki, dansplugins.com, Discord, bStats), the two release channels, the usage-reporting paragraph where the stable build reports, and the license. Its *tested versions* field states the Minecraft version the release gate booted the build on. Old descriptions that name retired sites, pre-transfer repository paths or Minecraft versions the build no longer targets are replaced, not edited around.
+The page's description is written from the README, not the other way round: what the plugin does, how to install it (this page or `/dpm get`), the links block (source, releases, wiki, dansplugins.com, Discord, bStats), the two release channels, the usage-reporting paragraph where the stable build reports, and the license. Its *tested versions* field states the Minecraft versions the release gate booted the build on. Old descriptions that name retired sites, pre-transfer repository paths or Minecraft versions the build no longer targets are replaced, not edited around.
 
 The README links the page in its install step (see [README structure](README_STRUCTURE.md)); a plugin that has no page says so nowhere and simply links the GitHub releases page.
 
