@@ -34,6 +34,8 @@ Testing Bukkit/Spigot plugins requires careful isolation because the Spigot API 
 
 For integration testing and manual verification, DPC plugins provide a Docker Compose setup that runs a local Spigot server.
 
+The server reads its variables from a `.env` file in the repository root. A `sample.env` file must be committed to the repository, so that a new contributor has a file to copy in step 2 below. The `.env` file holds each contributor's local values and must be listed in `.gitignore`, so that it is never committed.
+
 ### Setup
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop).
