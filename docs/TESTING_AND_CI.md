@@ -32,7 +32,7 @@ Testing Bukkit/Spigot plugins requires careful isolation because the Spigot API 
 
 ## Docker-Based Development Server
 
-For integration testing and manual verification, DPC plugins provide a Docker Compose setup that runs a local Spigot server.
+For integration testing and manual verification, DPC plugins provide a Docker Compose setup that runs a local Spigot server. The server is defined in a `docker-compose.yml` (or `compose.yml`) file. The `up.sh`, `down.sh`, and `reload-plugin.sh` scripts used below must be committed with the executable bit set, so that `./up.sh` runs straight after a clone.
 
 The server reads its variables from a `.env` file in the repository root. A `sample.env` file must be committed to the repository, so that a new contributor has a file to copy in step 2 below. The `.env` file holds each contributor's local values and must be listed in `.gitignore`, so that it is never committed.
 
