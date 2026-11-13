@@ -82,7 +82,7 @@ Explain how to verify that changes work:
 
 ### 8. Questions
 
-Encourage contributors to ask questions and, for DPC projects, provide the Discord server invite link.
+Encourage contributors to ask questions, and say where to ask them. For DPC projects, provide the Discord server invite link. For other projects, point to the repository's GitHub Discussions or issues instead, as the template's non-DPC line does.
 
 ## Template
 
