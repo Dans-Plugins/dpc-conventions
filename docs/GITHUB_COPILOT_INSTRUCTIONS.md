@@ -53,7 +53,7 @@ Highlight any project-specific conventions that go beyond the DPC-wide standards
 - Preferred patterns for commands, listeners, or services
 - Language-file usage for all user-facing strings
 
-### 5. Workflow Reminders
+### 5. Contribution Workflow
 
 Reinforce the DPC contribution workflow:
 
