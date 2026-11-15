@@ -24,7 +24,7 @@ A passing test suite produces a `BUILD SUCCESSFUL` message at the end of the out
 
 ### Test Location
 
-Unit tests live in `src/test/java/` (mirroring the main source tree in `src/main/java/`). Each test class should test a single class or a small, cohesive group of related classes.
+Unit tests live in `src/test/java/`, mirroring the package structure of the main source tree (`src/main/java/`, or `src/main/kotlin/` in a Kotlin plugin). Each test class should test a single class or a small, cohesive group of related classes.
 
 ### Mocking Spigot
 
