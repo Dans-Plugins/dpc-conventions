@@ -9,7 +9,7 @@ The goal is to bring every plugin in the organization to the same level of compl
 - [README Structure](docs/README_STRUCTURE.md) – Standard sections every DPC plugin README should contain
 - [Documentation Practices](docs/DOCUMENTATION_PRACTICES.md) – What to document and where (in-repo files vs. wiki)
 - [Contributing Standards](docs/CONTRIBUTING_STANDARDS.md) – What a complete `CONTRIBUTING.md` should include
-- [Testing and CI](docs/TESTING_AND_CI.md) – Testing practices and continuous-integration setup
+- [Testing and CI](docs/TESTING_AND_CI.md) – Testing practices, the Docker-based development server, and continuous-integration setup
 - [Release Automation](docs/RELEASE_AUTOMATION.md) – GitHub Action to build and attach a JAR to a release
 - [Release Channels](docs/RELEASE_CHANNELS.md) – What the stable and experimental channels promise operators, and how a build becomes stable
 - [GitHub Copilot Instructions](docs/GITHUB_COPILOT_INSTRUCTIONS.md) – Required `.github/copilot-instructions.md` file that gives Copilot context about each plugin
