@@ -36,7 +36,7 @@ The wiki is best for content that changes frequently, is community-maintained, o
 
 ## Writing Style
 
-- Use plain, concise language. Assume the reader is a Minecraft server operator, not a developer.
+- Use plain, concise language. Assume the reader is a Minecraft server operator, not a developer. The exceptions are `CONTRIBUTING.md`, the README's Testing and Development sections, and the Developer Notes and External API Documentation wiki pages. Their reader is a contributor or add-on developer and can be assumed to know Java or Kotlin, as [Contributing Standards](CONTRIBUTING_STANDARDS.md#3-requirements) requires of contributors.
 - Use numbered lists for sequential steps and bullet lists for unordered items.
 - Use fenced code blocks (triple backticks) for commands, config snippets, and file paths.
 - Link between documents rather than repeating the same content in multiple places.
